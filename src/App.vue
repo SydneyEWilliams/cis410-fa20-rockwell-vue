@@ -3,6 +3,8 @@
     <div class="container-fluid">
       <!-- create tag by registering component -->
       <app-header></app-header>
+      <h4>Movie Review App</h4>
+      <router-view></router-view>
     </div>
   </div>
 </template>
