@@ -4,7 +4,11 @@
       <!-- create tag by registering component -->
       <app-header></app-header>
       <h4>Movie Review App</h4>
+      <div class='row justify-content-center'>
+        <div class='column-md-10-lg-7'>
       <router-view></router-view>
+      </div>
+      </div>
     </div>
   </div>
 </template>
