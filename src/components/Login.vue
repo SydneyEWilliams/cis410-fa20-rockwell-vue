@@ -45,7 +45,7 @@ export default {
                     this.$store.commit("storeTokenInApp", myResponse.data.token);
                     this.$store.commit("storeUserInApp", myResponse.data.user);
 
-                    this.$router.replace('/orders/me')
+                    this.$router.replace('/myorders')
                 })
                 .catch((myError)=>{
                     console.log("my error:",myError.response.data)

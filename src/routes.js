@@ -10,11 +10,11 @@ import NotFound from './components/NotFound.vue';
 import ReviewCreate from './components/ReviewCreate.vue';
 import Signup from './components/Signup.vue';
 
-Vue.use(VueRouter); 
+Vue.use(VueRouter);
 
 const routes = [
     {path: '/', component: Home},
-    {path: '/orders/me', component: MyOrders},
+    {path: '/myorders', component: MyOrders},
     {path: '/signin', component: Login},
     {path: '/products', component: Products},
     {path: '/products/:pk', component: ProductDetail,
