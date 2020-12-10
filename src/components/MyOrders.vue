@@ -37,22 +37,24 @@ export default {
     },
     computed: {
         firstName(){
-            return this.$store.state.user.NameFirst
+            return this.$store.state.user.NameFirst}
         },
         created(){
             axios.get("/orders/me", {
                 headers:{
                     Authorization: `Bearer ${this.$store.state.token}`
                 }
-            }).then((response)=>{
+            })
+            .then((response)=>{
                 console.log('this is /orders/me response:', response)
                 this.ordersByUser = response.data})
+                
                 .catch(()=>{
                     this.accountError = true
                 })
         }
     }
-}
+
 </script>
 
 <style scoped>
