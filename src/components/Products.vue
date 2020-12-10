@@ -1,6 +1,7 @@
 <template>
 <div>
-    <h1>Movies</h1>
+    <!-- changed to reflect new api that works -->
+    <h1>Products</h1> 
 </div>
 </template>
 

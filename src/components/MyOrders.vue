@@ -1,6 +1,6 @@
 <template>
 <div>
-    <h1>Movie Detail</h1>
+    <h1>My Orders</h1>
 </div>
 </template>
 
