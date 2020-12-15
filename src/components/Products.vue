@@ -8,7 +8,7 @@
         <thead>
             <tr>
                 <th>Product Name</th>
-                <th>Product Category</th>
+                <!-- <th>Product Category</th> -->
                 <th>Price</th>
                 <th></th>
             </tr>
@@ -16,7 +16,7 @@
         <tbody>
             <tr v-for='thisProduct in products' :key="thisProduct.ProductID">
                 <th>{{thisProduct.productName}}</th>
-                <td>{{thisProduct.CategoryName}}</td>
+                <!-- <td>{{thisProduct.CategoryName}}</td> -->
                 <td>${{thisProduct.productPrice}}</td>
                 <td>
                     <router-link :to='`/products/${thisProduct.ProductID}`'>
