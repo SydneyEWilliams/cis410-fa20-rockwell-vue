@@ -12,11 +12,11 @@
       </li> -->
 <!-- OUR MENU ITEMS -->
       <li class="nav-item">
-        <router-link class="nav-link" to='/products'>Products</router-link>
+        <router-link class="nav-link" to='/'>Home</router-link>
       </li>
 
       <li class="nav-item">
-        <router-link class="nav-link" to='/orders/me'>My Orders</router-link>
+        <router-link class="nav-link" to='/products'>Products</router-link>
       </li>
 
       <li class="nav-item">
