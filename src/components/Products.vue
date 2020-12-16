@@ -1,10 +1,10 @@
 <template>
 <div>
     <!-- changed to reflect new api that works -->
-    <h1>Products</h1> 
-    <hr/>
+    <center><h1>Products</h1> </center>
+    <!-- <hr/> -->
 
-    <table class=table>
+    <table class="table table-striped table-bordered">
         <thead>
             <tr>
                 <th>Product Name</th>
@@ -41,5 +41,24 @@ export default {
 </script>
 
 <style scoped>
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Mansalva&family=Patrick+Hand&display=swap');
+
+h1   {font-family: 'Kalam', cursive;
+color: #6C3483;
+padding: 30px;
+font-weight: bolder;
+    }
+h3    {font-family: 'Kalam', cursive;
+color: #AF7AC5;
+font-size: 45px;}
+
+table{
+   font-family: 'Kalam', cursive;
+color: #6C3483;
+padding: 37px;
+font-weight: bolder; 
+font-size: 20px;
+}
 
 </style>

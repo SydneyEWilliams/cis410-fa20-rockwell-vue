@@ -1,6 +1,6 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <router-link class="navbar-brand" to='/'>Products & Products</router-link>
+    <nav class="navbar navbar-expand-lg">
+  <router-link class="navbar-brand" to='/' style="color:#6C3483;">Products & Products &#128717;&#65039;</router-link>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -12,31 +12,31 @@
       </li> -->
 <!-- OUR MENU ITEMS -->
       <li class="nav-item">
-        <router-link class="nav-link" to='/'>Home</router-link>
+        <router-link class="nav-link" to='/' style="color:#AF7AC5; font-weight:bold">Home</router-link>
       </li>
 
       <li class="nav-item">
-        <router-link class="nav-link" to='/products'>Products</router-link>
+        <router-link class="nav-link" to='/products' style="color:#AF7AC5; font-weight:bold">Products</router-link>
       </li>
 
       <li class="nav-item" v-if="auth">
-        <router-link class="nav-link" to='/myorders'>My Orders</router-link>
+        <router-link class="nav-link" to='/myorders' style="color:#AF7AC5; font-weight:bold">My Orders</router-link>
       </li>
 
       <li class="nav-item" v-if="!auth">
         <router-link class="nav-link" to='/signin'>
-        <button class='btn btn-warning'>Sign In</button>
+        <button class='btn'>Sign In</button>
         </router-link>
       </li>
 
       <li class="nav-item" v-if="!auth">
         <router-link class="nav-link" to='/signup'>
-        <button class='btn btn-outline-warning text-dark'>Sign Up</button>
+        <button class='btn'>Sign Up</button>
         </router-link>
       </li>
 
       <li class="nav-item" v-if="auth">
-        <button @click="onLogout" class='btn btn-warning'>Log Out</button>
+        <button @click="onLogout" class='btn'>Log Out</button>
       </li>
 
       <!-- <li class="nav-item dropdown">
@@ -76,5 +76,31 @@ export default {
 
 
 <style scoped>
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Mansalva&family=Patrick+Hand&display=swap');
+
+.navbar {
+  font-family: 'Kalam', cursive;
+  align-content: stretch;
+  background: #F4ECF7  ;
+}
+
+#app {
+  font-family: 'Kalam', cursive;
+}
+
+.nav-link{
+  justify-content: space-evenly;
+  text-align: justify;
+  padding: 5px;
+}
+
+.btn {
+    background: #AF7AC5;
+    color: #FDFEFE ;
+    padding: 8px;
+    margin: 2px;
+    font-weight: bold;
+}
 
 </style>

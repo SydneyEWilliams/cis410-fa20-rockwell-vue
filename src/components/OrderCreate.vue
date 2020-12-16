@@ -1,7 +1,9 @@
 <template>
 <div class="row justify-content-center"><div class="col-lg-10"><div class="card"><div class="card-body"><h4>Create an Order</h4> 
 
-<form id="review-form" @submit.prevent='submitOrder'><div class="form-group"><label for="cars">Choose a product:</label>
+<br/>
+
+<form id="review-form" @submit.prevent='submitOrder'><div class="form-group"><label for="order">&#128722; Choose a product:</label>
 <select id="products" name="products" v-model='productName'>
   <option value="js">Jump Starters and Accessories</option>
   <option value="ac">Arts and Craft Toys</option>
@@ -11,15 +13,17 @@
   <option value="epc">Eletric Pressure Cooker</option>
 </select ></div>
 
-<div class="form-group"><label for="payment">Choose a payment method:</label>
+<div class="form-group"><label for="payment">&#128179; Choose a payment method:</label>
 <select id="payment" name="payment" v-model='Payment'>
   <option value="credit">Credit</option>
   <option value="debit">Debit</option>
 </select ></div>
 
-<button v-on:click='cancelOrder' type="submit" class="btn btn-primary">Submit Order</button> <button type="clear" class="btn btn-outline-danger">
+<button type="submit" class="btn" style="background:green">Submit Order</button> 
+
+<button v-on:click='cancelOrder' type="clear" class="btn" style="background:red">
             Cancel
-          </button> 
+</button> 
 
     <p v-if='errorMessage' class="form-text text-danger">{{errorMessage}}</p>
 
@@ -42,8 +46,8 @@ export default {
         submitOrder(){
             const myOrder={
                 productName: this.productName,
-                Payment: this.Payment,
-                ProductID: this.$route.params.pk
+                payment: this.Payment,
+                productID: this.$route.params.pk
             };
 
             console.log('here is the order',myOrder)
@@ -58,12 +62,48 @@ export default {
             .catch(()=>{this.errorMessage = "Unable to create an order, please try again later."})
         },
         cancelOrder(){
-            this.$router.go(-1)
-        }
+            this.$router.go(-1);
+         }
     }
 }
 </script>
 
 <style scoped>
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Mansalva&family=Patrick+Hand&display=swap');
+
+.card   {font-family: 'Kalam', cursive;
+color: #6C3483;
+padding: 30px;
+font-weight: bolder;
+    }
+h3    {font-family: 'Kalam', cursive;
+color: #AF7AC5;
+font-size: 45px;}
+
+h4{
+    font-weight: bolder;
+    padding: 0px;
+}
+
+.review-form{
+    border: rebeccapurple;
+}
+
+h2{font-family: 'Kalam', cursive;
+color: #AF7AC5;
+font-size: 45px;}
+
+p{
+    font-size: 25px;
+}
+
+.btn {
+    font-family: 'Kalam', cursive;
+    background: #6C3483;
+    color: #FDFEFE ;
+    padding: 8px;
+    margin: 2px;
+}
 
 </style>
